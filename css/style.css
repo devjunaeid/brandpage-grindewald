@@ -240,6 +240,7 @@ body > * {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--deep-green);
 }
 
 .info .content .info-left {
@@ -260,7 +261,7 @@ body > * {
 .info-left p {
   width: 60%;
   font-family: switzer;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 24px;
 }
 
@@ -282,16 +283,19 @@ body > * {
 }
 
 .number-cont .info-label {
-  font-size: 44px;
+  font-family: switzer;
+  font-size: 24px;
 }
 
 .number-cont .info-body {
+  font-family: boska;
   font-size: 110px;
   font-weight: bold;
 }
 
 .number-cont .info-body span {
-  font-size: 44px;
+  font-family: switzer;
+  font-size: 24px;
   font-weight: normal;
   margin-left: 10px;
 }
@@ -614,8 +618,13 @@ body > * {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: none;
   padding-left: 400px;
   gap: 10px;
+}
+
+.reel::-webkit-scrollbar {
+  display: none;
 }
 
 .carocel-cont .reel .carocel-card {
@@ -681,11 +690,11 @@ body > * {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 50px;
+  padding: 40px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .carocel-cont .control-btn button {
@@ -748,6 +757,7 @@ a {
   padding: 10px 50px;
   border: var(--deep-green) solid 1px;
   border-radius: 60%;
+  text-decoration: none;
 }
 
 .info-section img {
