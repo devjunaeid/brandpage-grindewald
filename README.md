@@ -16,4 +16,7 @@ A band page for vacation/holiday place/home rental company using pure HTML, CSS 
 2. Open `brandpage-grindewald` folder on your code editor.
 3. Run live-server or open `index.html` on your browser.
 
+# Overview
+![](./assets/screenshot/overview.gif)
+
 
