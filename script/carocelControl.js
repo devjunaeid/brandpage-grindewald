@@ -7,26 +7,26 @@ const contentWith = carocelReel.clientWidth;
 
 // NextBtn controller.
 btnNext.addEventListener("click", () => {
-  if(btnPrev.hasAttribute("disabled")){
-    btnPrev.removeAttribute("disabled")
-  }
   if (parseInt(carocelReel.scrollWidth) - parseInt(carocelReel.scrollLeft) == contentWith) {
-    console.log("inside if");
     btnNext.setAttribute("disabled", "");
   } else {
     carocelReel.scrollLeft += slide.clientWidth + 30;
+  }
+  if(btnPrev.hasAttribute("disabled")){
+    btnPrev.removeAttribute("disabled")
   }
 });
 
 // PrevBtn controller.
 btnPrev.addEventListener("click", () => {
-  if(btnNext.hasAttribute("disabled")){
-    btnNext.removeAttribute("disabled")
-  }
   if (parseInt(carocelReel.scrollLeft) == 0) {
-    console.log("inside if");
     btnPrev.setAttribute("disabled", "");
   } else {
     carocelReel.scrollLeft -= slide.clientWidth + 30;
   }
+  if(btnNext.hasAttribute("disabled")){
+    btnNext.removeAttribute("disabled")
+  }
 });
+
+
