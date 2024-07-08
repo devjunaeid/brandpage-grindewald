@@ -7,10 +7,10 @@ const contentWith = carocelReel.clientWidth;
 
 // NextBtn controller.
 btnNext.addEventListener("click", () => {
-  if (parseInt(carocelReel.scrollWidth) - parseInt(carocelReel.scrollLeft) == contentWith) {
+  if (parseInt(carocelReel.scrollWidth) - parseInt(carocelReel.scrollLeft) < contentWith + 100) {
     btnNext.setAttribute("disabled", "");
   } else {
-    carocelReel.scrollLeft += slide.clientWidth + 30;
+    carocelReel.scrollLeft += slide.clientWidth + 100;
   }
   if(btnPrev.hasAttribute("disabled")){
     btnPrev.removeAttribute("disabled")
@@ -22,7 +22,7 @@ btnPrev.addEventListener("click", () => {
   if (parseInt(carocelReel.scrollLeft) == 0) {
     btnPrev.setAttribute("disabled", "");
   } else {
-    carocelReel.scrollLeft -= slide.clientWidth + 30;
+    carocelReel.scrollLeft -= slide.clientWidth + 100;
   }
   if(btnNext.hasAttribute("disabled")){
     btnNext.removeAttribute("disabled")
